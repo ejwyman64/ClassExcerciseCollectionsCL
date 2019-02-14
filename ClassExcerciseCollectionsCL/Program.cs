@@ -10,6 +10,17 @@ namespace ClassExcerciseCollectionsCL
     {
         static void Main(string[] args)
         {
+            IFileParser parser = new FileParser();
+
+            var dataCatcher = parser.Read("../../../data.txt");
+
+            for (int i = 0; i < dataCatcher.Length; i++)
+            {
+                Console.WriteLine(dataCatcher[i]);
+            }
+
+            Console.ReadKey();
+
         }
     }
 }
